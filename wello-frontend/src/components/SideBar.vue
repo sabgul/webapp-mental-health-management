@@ -8,7 +8,7 @@
     
     <!-- expand-on-hover -->
     <v-navigation-drawer
-        color="#e9e9e9"
+        color="#F3F3F3"
         permanent
         app
     >
@@ -17,10 +17,7 @@
       of {signed user}
     </v-container>
 
-        <v-divider>
-  
-        </v-divider>
-
+        <v-divider></v-divider>
 
         <v-list nav dense>
           <v-list-group
@@ -38,6 +35,7 @@
             :key="i"
             link
           >
+          
             <v-list-item-icon>
               <v-icon v-text="icon"></v-icon>
             </v-list-item-icon>
@@ -69,16 +67,10 @@
         </v-list-group>
 
         <v-list-item link href="#">
-                <v-list-item-icon>
-                    <v-icon color="#0C722E" small>mdi-lightbulb</v-icon>
-                </v-list-item-icon>
                 <v-list-item-title class="title">Trends.</v-list-item-title> 
         </v-list-item>
 
         <v-list-item link href="#">
-                <v-list-item-icon>
-                    <v-icon color="#0C722E" small>mdi-lightbulb</v-icon>
-                </v-list-item-icon>
                 <v-list-item-title class="title">Safe space.</v-list-item-title> 
         </v-list-item>
         </v-list>
@@ -94,15 +86,15 @@
 
     data: () => ({ 
       explore_list: [
-        ['Dashboard', 'mdi-account-multiple-outline'],
-        ['Get inspired', 'mdi-lightbulb-on-outline' ],
+        ['Dashboard', 'mdi-circle-small'],
+        ['Get inspired', 'mdi-circle-small' ],
       ], 
 
       exercise_list: [
-        ['Breathe', 'mdi-account-multiple-outline'],
-        ['Journal', 'mdi-cog-outline'],
-        ['Meditate', 'mdi-meditation'],
-        ['Reflect', 'mdi-cog-outline'],
+        ['Breathe', 'mdi-circle-small'],
+        ['Journal', 'mdi-circle-small'],
+        ['Meditate', 'mdi-menu-right-outline'],
+        ['Reflect', 'mdi-minus'],
       ],
     }),
   }
