@@ -1,18 +1,24 @@
 <template>
+<row>
+    <row>
     <div class="breathing_circle">
-    <div class="containerr" id="containerr">
+    <div class="cont" id="cont">
       <div class="circle"></div>
-
-    <v-btn @click=breathAnimation()></v-btn>
-      <p id="text" @click=breathAnimation()></p>
-
-      <div class="pointer-container">
+        <p id="text">Prepare</p>
+      <div class="pointer-container" id="pointer-container">
         <span class="pointer"></span>
       </div>
 
       <div class="gradient-circle"></div>
     </div>
     </div>
+    </row>
+<row justify="center"> 
+    <v-btn @click=breathe() class="breathe-btn">
+        <p>Begin</p>
+    </v-btn>
+</row>
+</row>
 </template>
 
 <script>
@@ -24,35 +30,38 @@
     }),
     
     methods: {
-        breathAnimation() {
+        breathe: function breathe() {        
+        function breathAnimation() {
             let totalTime = 7500;
             let breatheTime = (totalTime / 5) * 2;
             let holdTime = totalTime / 5;
 
-            const container = document.getElementById('container');
+            const cont = document.getElementById('cont');
             const text = document.getElementById('text');
+            const pointer = document.getElementById('pointer-container');
 
-            text.innerText = 'Breathe In!';
-            container.className = 'container grow';
+            text.innerText = 'Breathe In';
+            cont.className = 'cont grow';
+            pointer.className = 'pointer-container-animate';
 
             setTimeout(() => {
                 text.innerText = 'Hold';
 
                 setTimeout(() => {
-                text.innerText = 'Breathe Out!';
-                container.className = 'container shrink';
+                text.innerText = 'Breathe Out';
+                cont.className = 'cont shrink';
                 }, holdTime);
             }, breatheTime);
-        
-            // setInterval(breathAnimation, totalTime);
-        } 
+        }
+            setInterval(breathAnimation, 7500);
+        },
     },
     }
 </script> 
 
 <style>
-/* 
-.breathing_circle {
+
+/* .breathing_circle {
   color: #fff;
   font-family: 'Montserrat', sans-serif;
   min-height: 100vh;
@@ -60,11 +69,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0;
 } */
+.breathing_circle {
+    padding: 100px;
+}
 
-
-.containerr {
+.cont {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -75,8 +85,17 @@
   transform: scale(1);
 }
 
+.breathe-btn {
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+  transform: scale(1);
+}
+
 .circle {
-  background-color: #F4EBE8;
+  background-color: #E6F7DE;
   height: 100%;
   width: 100%;
   border-radius: 50%;
@@ -95,6 +114,7 @@
     #336d62 60%,
     #2a5b52 100%
   );
+  
   height: 320px;
   width: 320px;
   z-index: -2;
@@ -118,7 +138,18 @@
   left: 140px;
   width: 20px;
   height: 190px;
+  /* animation: rotate 7.5s linear forwards infinite; */
+  transform-origin: bottom center;
+} 
+
+.pointer-container-animate {
   animation: rotate 7.5s linear forwards infinite;
+  position: absolute;
+  top: -40px;
+  left: 140px;
+  width: 20px;
+  height: 190px;
+  /* animation: rotate 7.5s linear forwards infinite; */
   transform-origin: bottom center;
 }
 
@@ -132,7 +163,7 @@
   }
 }
 
-.container.grow {
+.cont.grow {
   animation: grow 3s linear forwards;
 }
 
@@ -146,7 +177,7 @@
   }
 }
 
-.container.shrink {
+.cont.shrink {
   animation: shrink 3s linear forwards;
 }
 

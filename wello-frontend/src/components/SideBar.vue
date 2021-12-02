@@ -1,7 +1,6 @@
 <template>
 <v-container>
-    
-    
+        
     <!-- expand-on-hover -->
     <v-navigation-drawer
         color="#F3F3F3"

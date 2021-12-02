@@ -36,5 +36,7 @@ export default {
   font-family: 'Courier New', Courier, monospace;
 }
 
-
+#navbar {
+  color: #3daf7b;
+}
 </style>
