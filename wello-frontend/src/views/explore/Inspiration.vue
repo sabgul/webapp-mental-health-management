@@ -51,11 +51,6 @@
 
     <v-card-actions>
       <v-list-item class="grow">
-          <!-- <v-img
-            class="elevation-6"
-            alt=""
-            src="@/assets/undraw_handcrafts_space.svg"
-          ></v-img> -->
 
         <v-list-item-content>
           <v-list-item-title>-Evan You</v-list-item-title>
