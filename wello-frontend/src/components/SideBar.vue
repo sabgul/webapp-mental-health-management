@@ -1,10 +1,6 @@
 <template>
-  <v-container>
-<div id="app">
-  <v-app id="inspire">
-    <v-app-bar app>
-      Title
-    </v-app-bar>
+<v-container>
+    
     
     <!-- expand-on-hover -->
     <v-navigation-drawer
@@ -19,6 +15,7 @@
 
         <v-divider></v-divider>
 
+        <!-- Menu  -->
         <v-list nav dense>
           <v-list-group
           :value="true"
@@ -31,9 +28,9 @@
           </template>
 
           <v-list-item
-            v-for="([title, icon], i) in explore_list"
+            v-for="([title, icon, link], i) in explore_list"
             :key="i"
-            link
+            link @click="goToPage(link)"
           >
           
             <v-list-item-icon>
@@ -53,9 +50,9 @@
           </template>
 
           <v-list-item
-            v-for="([title, icon], i) in exercise_list"
+            v-for="([title, icon, link], i) in exercise_list"
             :key="i"
-            link
+            link @click="goToPage(link)"
           >
             <v-list-item-icon>
               <v-icon v-text="icon"></v-icon>
@@ -66,17 +63,15 @@
           </v-list-item>
         </v-list-group>
 
-        <v-list-item link href="#">
+        <v-list-item link href="trends">
                 <v-list-item-title class="title">Trends.</v-list-item-title> 
         </v-list-item>
 
-        <v-list-item link href="#">
+        <v-list-item link href="safespace">
                 <v-list-item-title class="title">Safe space.</v-list-item-title> 
         </v-list-item>
         </v-list>
     </v-navigation-drawer>
-  </v-app>
-</div>
   </v-container>
 </template>
 
@@ -86,16 +81,22 @@
 
     data: () => ({ 
       explore_list: [
-        ['Dashboard', 'mdi-circle-small'],
-        ['Get inspired', 'mdi-circle-small' ],
+        ['Dashboard', 'mdi-circle-small', '/'],
+        ['Get inspired', 'mdi-circle-small', '/inspiration'],
       ], 
 
       exercise_list: [
-        ['Breathe', 'mdi-circle-small'],
-        ['Journal', 'mdi-circle-small'],
-        ['Meditate', 'mdi-menu-right-outline'],
-        ['Reflect', 'mdi-minus'],
-      ],
+        ['Breathe', 'mdi-circle-small', '/breathing'],
+        ['Journal', 'mdi-circle-small', '/journaling'],
+        ['Meditate', 'mdi-menu-right-outline', '/meditation'],
+        ['Reflect', 'mdi-minus', '/reflect'],
+      ], 
     }),
+
+    methods: {
+        goToPage(link) {
+          this.$router.push({ path: link });
+        }
+    },
   }
 </script>
