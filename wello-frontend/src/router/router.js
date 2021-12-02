@@ -10,6 +10,30 @@
         component: () => import('@/views/explore/Inspiration'),
     }, 
 
+    {  
+        path: '/breathing',
+        name: 'breathe',
+        component: () => import('@/views/exercise/Breathing'),
+    },
+
+    {  
+        path: '/journaling',
+        name: 'journal',
+        component: () => import('@/views/exercise/Journal'),
+    }, 
+
+    {  
+        path: '/meditation',
+        name: 'meditate',
+        component: () => import('@/views/exercise/Meditate'),
+    },
+
+    {  
+        path: '/reflect',
+        name: 'reflect',
+        component: () => import('@/views/exercise/Reflect'),
+    },
+
     {
         path: '/trends',
         name: 'trends',
