@@ -27,3 +27,12 @@ export default {
   }),
 };
 </script>
+
+<style> 
+
+#app {
+  background-color: #F3F3F3;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+</style>
