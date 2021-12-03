@@ -24,8 +24,6 @@
         </v-card-actions>
     </v-card> -->
 
-
-
     <v-card
     class="mx-auto"
     elevation="8"
@@ -79,3 +77,15 @@
 
 </v-container>
 </template>
+
+<script>
+  export default {
+    name: 'Inspiration',
+
+    data: () => ({
+    }),
+
+    methods: {
+    },
+  }
+</script>

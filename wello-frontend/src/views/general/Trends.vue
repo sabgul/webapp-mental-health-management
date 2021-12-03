@@ -11,3 +11,15 @@
         </div>
     </div>
 </template>
+
+<script>
+  export default {
+    name: 'Trends',
+
+    data: () => ({
+    }),
+
+    methods: {
+    },
+  }
+</script>

@@ -1,6 +1,31 @@
 <template>
-<row>
-    <row>
+
+<div>
+    <v-container>
+        <v-layout row 
+            justify="center"> 
+            <div class="breathing_circle">
+                <div class="cont" id="cont">
+                <div class="circle"></div>
+                    <p id="text">Prepare</p>
+                <div class="pointer-container" id="pointer-container">
+                    <span class="pointer"></span>
+                </div>
+
+                <div class="gradient-circle"></div>
+                </div>
+            </div>
+        </v-layout>
+
+        <v-layout row justify="center"> 
+            <v-btn @click=breathe() class="breathe-btn">
+                <p>Begin</p>
+            </v-btn>
+        </v-layout>
+    </v-container>
+</div>
+<!-- <v-row>
+    <v-row>
     <div class="breathing_circle">
     <div class="cont" id="cont">
       <div class="circle"></div>
@@ -12,13 +37,13 @@
       <div class="gradient-circle"></div>
     </div>
     </div>
-    </row>
-<row justify="center"> 
+    </v-row>
+<v-row justify="center"> 
     <v-btn @click=breathe() class="breathe-btn">
         <p>Begin</p>
     </v-btn>
-</row>
-</row>
+</v-row>
+</v-row> -->
 </template>
 
 <script>
@@ -61,17 +86,19 @@
 
 <style>
 
-/* .breathing_circle {
-  color: #fff;
-  font-family: 'Montserrat', sans-serif;
-  min-height: 100vh;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+.breathing_circle {
+  /* color: #fff; */
+  /* font-family: 'Montserrat', sans-serif; */
+  /* min-height: 100vh; */
+  /* overflow: hidden; */
+  /* display: flex; */
+  flex-direction: row;
   align-items: center;
-} */
+}
+
 .breathing_circle {
     padding: 100px;
+    justify-content: center;
 }
 
 .cont {
@@ -138,7 +165,6 @@
   left: 140px;
   width: 20px;
   height: 190px;
-  /* animation: rotate 7.5s linear forwards infinite; */
   transform-origin: bottom center;
 } 
 
@@ -149,7 +175,6 @@
   left: 140px;
   width: 20px;
   height: 190px;
-  /* animation: rotate 7.5s linear forwards infinite; */
   transform-origin: bottom center;
 }
 

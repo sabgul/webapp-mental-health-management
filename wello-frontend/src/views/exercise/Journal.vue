@@ -9,19 +9,25 @@
       <v-row>
           <v-text-field
           shaped
-            v-model="first"
             label="What day is it?"
             solo
           ></v-text-field>
       </v-row>
      <v-row>
           <v-textarea
-            v-model="last"
             label="What's on your mind?"
             solo
             height="500"
             multi-line
-        ></v-textarea>
+        >
+    
+        <v-btn>
+          <v-icon class="mr-1">
+            mdi-send-outline
+          </v-icon>
+            SAVE 
+        </v-btn>
+        </v-textarea>
     
       </v-row>
 
@@ -74,6 +80,8 @@
 
 <script>
   export default {
+    name: 'Journal',
+
     data: () => ({
       years: [
         {
@@ -100,3 +108,4 @@
     }),
   }
 </script>
+

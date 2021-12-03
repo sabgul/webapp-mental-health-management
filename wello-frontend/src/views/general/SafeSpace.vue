@@ -52,7 +52,7 @@
 
     <v-divider></v-divider>
     <v-card-text class="text-h5 font-weight-bold">
-        Linka prvej pomoci
+        Krízová linka pomoci
     </v-card-text>
 
     <v-card-text class="text-h7 font-weight-bold">
@@ -60,7 +60,7 @@
     </v-card-text>
     <v-divider></v-divider>
     <v-card-text class="text-h5 font-weight-bold">
-        Linka prvej pomoci
+        IPčko.sk
     </v-card-text>
 
     <v-card-text class="text-h7 font-weight-bold">
@@ -69,15 +69,57 @@
 
     <v-divider></v-divider>
     <v-card-text class="text-h5 font-weight-bold">
-        Better help
+        Dobrá linika
     </v-card-text>
 
     <v-card-text class="text-h7 font-weight-bold">
         Better help
     </v-card-text>
+
+    <v-divider></v-divider>
+    <v-card-text class="text-h5 font-weight-bold">
+        Better help    
+    </v-card-text>
+
+    <v-card-text class="text-h7 font-weight-bold">
+        Better help
+    </v-card-text>
+
+    <v-card-actions>
+      <v-list-item class="grow">
+
+        <v-row
+          align="center"
+          justify="center"
+        >
+        <v-btn>
+          <v-icon class="mr-1">
+            mdi-chevron-down
+          </v-icon>
+          <span class="subheading mr-2">More</span>
+        </v-btn>
+    </v-row>
+
+
+    </v-list-item>
+    </v-card-actions>
+
+
   </v-card>
     </v-row>
 
 
 </v-container>
 </template>
+
+<script>
+  export default {
+    name: 'SafeSpace',
+
+    data: () => ({
+    }),
+
+    methods: {
+    },
+  }
+</script>
