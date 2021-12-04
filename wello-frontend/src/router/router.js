@@ -28,12 +28,6 @@
         component: () => import('@/views/exercise/Meditate'),
     },
 
-    {  
-        path: '/reflect',
-        name: 'reflect',
-        component: () => import('@/views/exercise/Reflect'),
-    },
-
     {
         path: '/trends',
         name: 'trends',

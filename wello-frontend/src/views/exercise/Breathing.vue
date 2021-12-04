@@ -3,6 +3,7 @@
 <div>
     <v-container>
         <v-layout row justify="center" align="center"> 
+            <v-flex>
             <div class="breathing_circle">
                 <div class="cont" id="cont">
                 <div class="circle"></div>
@@ -14,12 +15,15 @@
                 <div class="gradient-circle"></div>
                 </div>
             </div>
+            </v-flex>
         </v-layout>
 
         <v-layout row justify="center"> 
+            <v-flex>
             <v-btn @click=breathe() class="breathe-btn">
                 Begin
             </v-btn>
+            </v-flex>
         </v-layout>
     </v-container>
 </div>

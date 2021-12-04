@@ -108,7 +108,6 @@
         ['Breathe', 'mdi-minus', '/breathing'],
         ['Journal', 'mdi-minus', '/journaling'],
         ['Meditate', 'mdi-minus', '/meditation'],
-        ['Reflect', 'mdi-minus', '/reflect'],
       ], 
 
       examine_list: [

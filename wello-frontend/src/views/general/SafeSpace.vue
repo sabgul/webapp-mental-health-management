@@ -27,7 +27,7 @@
 
 
     <v-card
-    class="mx-auto"
+    class="ma-5 padding-3"
     elevation="8"
     shaped
     outlined
