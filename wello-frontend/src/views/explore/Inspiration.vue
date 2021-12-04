@@ -1,29 +1,6 @@
 <template>
 <v-container>
     <v-row align="center" justify="center">
-        <!-- <v-card
-        elevation="12"
-        outlined
-        shaped
-        width="75%">
-            <v-card-title color="#3DAF7B">Highlight</v-card-title>
-            <v-card-text >"This is some random fucking bullshit supposed to be a placeholder."</v-card-text>
-            <v-card-text>-Author</v-card-text>
-        <v-card-actions class="justify-center">
-            <v-btn
-                class="mx-2"
-                fab
-                dark
-                small
-                color="#3DAF7B"
-            >
-                <v-icon dark>
-                    mdi-heart
-                </v-icon>
-            </v-btn>
-        </v-card-actions>
-    </v-card> -->
-
     <v-card
     class="mx-auto"
     elevation="8"
@@ -72,7 +49,9 @@
     </v-row>
 
 <v-row align="center" justify="center">
-    CARousel comes here
+    ... 
+
+
 </v-row>
 
 </v-container>

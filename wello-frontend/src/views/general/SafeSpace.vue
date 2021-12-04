@@ -56,24 +56,35 @@
     </v-card-text>
 
     <v-card-text class="text-h7 font-weight-bold">
-        Linka prvej pomoci
-    </v-card-text>
+        <v-icon>
+            mdi-phone
+        </v-icon>
+            0800 500 333    
+        </v-card-text>
     <v-divider></v-divider>
     <v-card-text class="text-h5 font-weight-bold">
         IPčko.sk
     </v-card-text>
 
     <v-card-text class="text-h7 font-weight-bold">
-        Linka prvej pomoci
+        <v-btn icon href="https://ipcko.sk/mapa-pomoci/linky-pomoci/" target="_blank">
+        <v-icon>
+            mdi-earth
+        </v-icon>
+        ipcko.sk
+        </v-btn>
     </v-card-text>
 
     <v-divider></v-divider>
     <v-card-text class="text-h5 font-weight-bold">
-        Dobrá linika
+        Dobrá linka
     </v-card-text>
 
     <v-card-text class="text-h7 font-weight-bold">
-        Better help
+        <v-icon>
+            mdi-at
+        </v-icon>
+        poradna@dobralinka.sk
     </v-card-text>
 
     <v-divider></v-divider>
@@ -82,7 +93,12 @@
     </v-card-text>
 
     <v-card-text class="text-h7 font-weight-bold">
-        Better help
+        <v-btn icon href="https://www.betterhelp.com/" target="_blank">
+        <v-icon>
+            mdi-earth
+        </v-icon>
+        betterhelp.com
+        </v-btn>
     </v-card-text>
 
     <v-card-actions>
@@ -92,9 +108,9 @@
           align="center"
           justify="center"
         >
-        <v-btn>
+        <v-btn href="https://ipcko.sk/mapa-pomoci/linky-pomoci/" target="_blank">
           <v-icon class="mr-1">
-            mdi-chevron-down
+            mdi-chevron-right
           </v-icon>
           <span class="subheading mr-2">More</span>
         </v-btn>

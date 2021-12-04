@@ -2,8 +2,7 @@
 
 <div>
     <v-container>
-        <v-layout row 
-            justify="center"> 
+        <v-layout row justify="center" align="center"> 
             <div class="breathing_circle">
                 <div class="cont" id="cont">
                 <div class="circle"></div>
@@ -19,31 +18,12 @@
 
         <v-layout row justify="center"> 
             <v-btn @click=breathe() class="breathe-btn">
-                <p>Begin</p>
+                Begin
             </v-btn>
         </v-layout>
     </v-container>
 </div>
-<!-- <v-row>
-    <v-row>
-    <div class="breathing_circle">
-    <div class="cont" id="cont">
-      <div class="circle"></div>
-        <p id="text">Prepare</p>
-      <div class="pointer-container" id="pointer-container">
-        <span class="pointer"></span>
-      </div>
 
-      <div class="gradient-circle"></div>
-    </div>
-    </div>
-    </v-row>
-<v-row justify="center"> 
-    <v-btn @click=breathe() class="breathe-btn">
-        <p>Begin</p>
-    </v-btn>
-</v-row>
-</v-row> -->
 </template>
 
 <script>
@@ -86,15 +66,15 @@
 
 <style>
 
-.breathing_circle {
+/* .breathing_circle {
   /* color: #fff; */
   /* font-family: 'Montserrat', sans-serif; */
   /* min-height: 100vh; */
   /* overflow: hidden; */
   /* display: flex; */
-  flex-direction: row;
+  /* flex-direction: row;
   align-items: center;
-}
+} */
 
 .breathing_circle {
     padding: 100px;
