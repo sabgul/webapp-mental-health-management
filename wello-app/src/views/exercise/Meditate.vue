@@ -1,3 +1,8 @@
+<!-- ------------------------------------
+Author:     Sabina Gulcikova 
+         xgulci00@stud.fit.vutbr.cz
+Date:           3/12/21 
+------------------------------------- -->
 <template>
   <v-container>
     <v-layout column>
@@ -44,7 +49,6 @@
           >
             <circle cx="226.5" cy="226.5" r="216.5" stroke="#018EBA" stroke-width="20" />
           </svg>
-          <!-- <v-img :src="require('@/assets/svg/replay.svg')" class="replay"></v-img> -->
 
           <h3 id="time-display">2:00</h3>
         </div>
@@ -203,7 +207,6 @@ export default {
       });
 
       const restartSong = song => {
-        // let currentTime = song.currentTime;
         song.currentTime = 0;
         console.log("ciao");
       };
@@ -263,7 +266,6 @@ export default {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  /* font-family: "Montserrat", sans-serif; */
 }
 
 .sound-picker {

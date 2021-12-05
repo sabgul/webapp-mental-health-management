@@ -1,3 +1,11 @@
+/* 
+*
+* Author:       Sabina Gulcikova
+*         xgulci00@stud.fit.vutbr.cz
+* Date:            03/12/21 
+*
+*/
+
 class StoriesService {
     getAll() {
       return require('../data/stories.json');

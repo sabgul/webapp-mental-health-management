@@ -1,3 +1,8 @@
+<!-- ------------------------------------
+Author:     Sabina Gulcikova 
+         xgulci00@stud.fit.vutbr.cz
+Date:           3/12/21 
+------------------------------------- -->
 <template>
   <v-container>
     <v-layout row wrap justify="center">
@@ -34,9 +39,10 @@
           <v-app>
             <v-sheet>
               <v-slide-group v-model="model" class="temp" center-active show-arrows>
-                <v-slide-item v-slot:default="{ active, toggle }" 
-                v-for="(story, i) in stories.stories"
-                :key="i"
+                <v-slide-item
+                  v-slot:default="{ active, toggle }"
+                  v-for="(story, i) in stories.stories"
+                  :key="i"
                 >
                   <v-card max-width="200" @click="toggle" elevation="8" outlined class="mr-10">
                     <v-img height="200px" :src="require('@/assets/undraw_handcrafts_tree.svg')"></v-img>
@@ -51,7 +57,14 @@
                         <v-row align="center" justify="center">
                           <v-dialog v-model="dialog" width="600px">
                             <template v-slot:activator="{ on, attrs }">
-                              <v-btn color="#3DAF7B" dark v-bind="attrs" v-on="on" text style="bottom: 0;">Read more</v-btn>
+                              <v-btn
+                                color="#3DAF7B"
+                                dark
+                                v-bind="attrs"
+                                v-on="on"
+                                text
+                                style="bottom: 0;"
+                              >Read more</v-btn>
                             </template>
                             <v-toolbar dark color="#3DAF7B">
                               <v-btn icon dark @click="dialog = false">
@@ -62,9 +75,7 @@
                             </v-toolbar>
 
                             <v-card>
-                              <v-card-text>
-                                {{story.text}}
-                              </v-card-text>
+                              <v-card-text>{{story.text}}</v-card-text>
                               <v-card-actions>
                                 <v-spacer></v-spacer>
                                 <v-btn color="green darken-1" text @click="dialog = false">Close</v-btn>
@@ -126,7 +137,7 @@ export default {
     },
 
     getStories: function() {
-        this.stories = StoriesService.getAll();
+      this.stories = StoriesService.getAll();
     }
   },
 

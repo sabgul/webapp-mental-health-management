@@ -1,88 +1,78 @@
+<!-- ------------------------------------
+Author:     Sabina Gulcikova 
+         xgulci00@stud.fit.vutbr.cz
+Date:           3/12/21 
+------------------------------------- -->
+
 <template>
-
-<div>
+  <div>
     <v-container>
-        <v-layout row justify="center" align="center"> 
-            <v-flex>
-            <div class="breathing_circle">
-                <div class="cont" id="cont">
-                <div class="circle"></div>
-                    <p id="text">Prepare</p>
-                <div class="pointer-container" id="pointer-container">
-                    <span class="pointer"></span>
-                </div>
+      <v-layout row justify="center" align="center">
+        <v-flex>
+          <div class="breathing_circle">
+            <div class="cont" id="cont">
+              <div class="circle"></div>
+              <p id="text">Prepare</p>
+              <div class="pointer-container" id="pointer-container">
+                <span class="pointer"></span>
+              </div>
 
-                <div class="gradient-circle"></div>
-                </div>
+              <div class="gradient-circle"></div>
             </div>
-            </v-flex>
-        </v-layout>
+          </div>
+        </v-flex>
+      </v-layout>
 
-        <v-layout row justify="center"> 
-            <v-flex>
-            <v-btn @click=breathe() class="breathe-btn">
-                Begin
-            </v-btn>
-            </v-flex>
-        </v-layout>
+      <v-layout row justify="center">
+        <v-flex>
+          <v-btn @click="breathe()" class="breathe-btn">Begin</v-btn>
+        </v-flex>
+      </v-layout>
     </v-container>
-</div>
-
+  </div>
 </template>
 
 <script>
-    export default {
-    name: 'Breathing',
+export default {
+  name: "Breathing",
 
-    data: () => ({ 
-        
-    }),
-    
-    methods: {
-        breathe: function breathe() {        
-        function breathAnimation() {
-            let totalTime = 7500;
-            let breatheTime = (totalTime / 5) * 2;
-            let holdTime = totalTime / 5;
+  data: () => ({}),
 
-            const cont = document.getElementById('cont');
-            const text = document.getElementById('text');
-            const pointer = document.getElementById('pointer-container');
+  methods: {
+    breathe: function breathe() {
+      function breathAnimation() {
+        let totalTime = 7500;
+        let breatheTime = (totalTime / 5) * 2;
+        let holdTime = totalTime / 5;
 
-            text.innerText = 'Breathe In';
-            cont.className = 'cont grow';
-            pointer.className = 'pointer-container-animate';
+        const cont = document.getElementById("cont");
+        const text = document.getElementById("text");
+        const pointer = document.getElementById("pointer-container");
 
-            setTimeout(() => {
-                text.innerText = 'Hold';
+        text.innerText = "Breathe In";
+        cont.className = "cont grow";
+        pointer.className = "pointer-container-animate";
 
-                setTimeout(() => {
-                text.innerText = 'Breathe Out';
-                cont.className = 'cont shrink';
-                }, holdTime);
-            }, breatheTime);
-        }
-            setInterval(breathAnimation, 7500);
-        },
-    },
+        setTimeout(() => {
+          text.innerText = "Hold";
+
+          setTimeout(() => {
+            text.innerText = "Breathe Out";
+            cont.className = "cont shrink";
+          }, holdTime);
+        }, breatheTime);
+      }
+      setInterval(breathAnimation, 7500);
     }
+  }
+};
 </script> 
 
 <style>
 
-/* .breathing_circle {
-  /* color: #fff; */
-  /* font-family: 'Montserrat', sans-serif; */
-  /* min-height: 100vh; */
-  /* overflow: hidden; */
-  /* display: flex; */
-  /* flex-direction: row;
-  align-items: center;
-} */
-
 .breathing_circle {
-    padding: 100px;
-    justify-content: center;
+  padding: 100px;
+  justify-content: center;
 }
 
 .cont {
@@ -97,7 +87,7 @@
 }
 
 .breathe-btn {
-    display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   margin: auto;
@@ -106,7 +96,7 @@
 }
 
 .circle {
-  background-color: #E6F7DE;
+  background-color: #e6f7de;
   height: 100%;
   width: 100%;
   border-radius: 50%;
@@ -125,7 +115,7 @@
     #336d62 60%,
     #2a5b52 100%
   );
-  
+
   height: 320px;
   width: 320px;
   z-index: -2;
@@ -136,7 +126,7 @@
 }
 
 .pointer {
-  background-color: #0C722E;
+  background-color: #0c722e;
   border-radius: 50%;
   height: 20px;
   width: 20px;
@@ -150,7 +140,7 @@
   width: 20px;
   height: 190px;
   transform-origin: bottom center;
-} 
+}
 
 .pointer-container-animate {
   animation: rotate 7.5s linear forwards infinite;

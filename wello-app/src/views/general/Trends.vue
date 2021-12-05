@@ -1,3 +1,8 @@
+<!-- ------------------------------------
+Author:     Sabina Gulcikova 
+         xgulci00@stud.fit.vutbr.cz
+Date:           3/12/21 
+------------------------------------- -->
 <template>
   <div>
     <v-container justify-center>
@@ -43,9 +48,7 @@
 
             <v-card-text>
               <v-list color="#3DAF7B">
-                <v-list-item
-                  v-for="(el_texto, i) in highs"
-                  :key="i">
+                <v-list-item v-for="(el_texto, i) in highs" :key="i">
                   <v-icon left>mdi-circle-small</v-icon>
                   <span class="text-h8 font-weight-bold">{{el_texto}}</span>
                 </v-list-item>
@@ -66,9 +69,7 @@
 
             <v-card-text>
               <v-list color="#3DAF7B">
-                <v-list-item
-                  v-for="(el_texto, i) in lows"
-                  :key="i">
+                <v-list-item v-for="(el_texto, i) in lows" :key="i">
                   <v-icon left>mdi-circle-small</v-icon>
                   <span class="text-h8 font-weight-bold">{{el_texto}}</span>
                 </v-list-item>

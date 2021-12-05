@@ -1,3 +1,11 @@
+/* 
+*
+* Author:       Sabina Gulcikova
+*         xgulci00@stud.fit.vutbr.cz
+* Date:            03/12/21 
+*
+*/
+
 import Vue from 'vue'
 import App from './App.vue'
 import vuetify from './plugins/vuetify'

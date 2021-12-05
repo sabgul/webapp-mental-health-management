@@ -1,26 +1,28 @@
+<!-- ------------------------------------
+Author:     Sabina Gulcikova 
+         xgulci00@stud.fit.vutbr.cz
+Date:           3/12/21 
+------------------------------------- -->
 <template>
   <v-app>
     <v-main>
-      <SideBar/>
+      <SideBar />
 
-      <v-app-bar height="72px" app class="navbar">
-      {{currentRouteName}}
-      </v-app-bar>
+      <v-app-bar height="72px" app class="navbar">{{currentRouteName}}</v-app-bar>
 
-      <router-view :key="$route.fullPath"/>
+      <router-view :key="$route.fullPath" />
     </v-main>
   </v-app>
 </template>
 
 <script>
-import SideBar from './components/SideBar';
-
+import SideBar from "./components/SideBar";
 
 export default {
-  name: 'App',
+  name: "App",
 
   components: {
-    'SideBar': SideBar,
+    SideBar: SideBar
   },
 
   created() {
@@ -29,29 +31,31 @@ export default {
 
   computed: {
     currentRouteName() {
-        let name = this.$route.name;
+      let name = this.$route.name;
 
-        if(name !== null)
-          name = name.charAt(0).toUpperCase() + name.slice(1);
+      if (name !== null) name = name.charAt(0).toUpperCase() + name.slice(1);
 
-        return name;
+      return name;
     }
   },
 
   data: () => ({
     //
-  }),
+  })
 };
 </script>
 
-<style> 
-
+<style>
 #app {
-  background-color: #F3F3F3;
-  font-family: 'Courier New', Courier, monospace;
+  background-color: #f3f3f3;
+  font-family: "Courier New", Courier, monospace;
 }
 
-.unscrollable {margin: 0; height: 100%; overflow: hidden};
+.unscrollable {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
 
 #navbar {
   color: #3daf7b;

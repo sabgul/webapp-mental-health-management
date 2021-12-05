@@ -1,3 +1,11 @@
+/* 
+*
+* Author:       Sabina Gulcikova
+*         xgulci00@stud.fit.vutbr.cz
+* Date:            03/12/21 
+*
+*/
+
 class JournalRecordsService {
     getAll() {
       return require('../data/journalRecords.json');
