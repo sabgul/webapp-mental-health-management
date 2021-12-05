@@ -1,74 +1,79 @@
 <template>
-    <v-container>
-        <v-row>
+<v-container>
+    <v-row>
 
 <!-- Text input  -->
-        <v-col  align="center" justify="center">
-           <v-form>
-    <v-container  align="center" justify="center">
-      <v-row>
-          <v-text-field
-          shaped
-            label="What day is it?"
-            solo
-          ></v-text-field>
-      </v-row>
-     <v-row>
-          <v-textarea
-            label="What's on your mind?"
-            solo
-            height="500"
-            multi-line
-        >
-    
-        <v-btn>
-          <v-icon class="mr-1">
-            mdi-send-outline
-          </v-icon>
-            SAVE 
-        </v-btn>
-        </v-textarea>
-    
-      </v-row>
+    <v-col  align="center" justify="center">
+            <v-card
+                class="ma-3"
+                elevation="8"
+                shaped
+                outlined
+                color="#3DAF7B"
+                dark
+                min-width="75%"
+            >
+                <v-card-title>
+                    <span class="text-h4 font-weight-bold">Journal note for {{getTodayDate()}}</span>
+                </v-card-title>
 
-      <v-row>
+            <v-row align="center" justify="center">
+            <v-textarea
+                class="text-4 font-weight-bold ma-5"
+                label="Today's entry"
+                id="feelingTextArea"
+                multi-line
+                v-model="todaysEntry"
+            ></v-textarea>
+    </v-row>
+    </v-card>
+     <v-row>
           <v-img
           :src="require('@/assets/undraw_road_to_knowledge_m8s0.svg')"
           width="15"
-          >
-
-          </v-img>
-
+          ></v-img>
       </v-row>
-    </v-container>
-  </v-form>
-        </v-col>
+     </v-col>
 
-<!-- Scrollable timeline -->
         <v-col>
         <v-card elevation="8"
             shaped
             outlined>
         <v-timeline>
+
     <v-timeline-item
-      v-for="(year, i) in years"
-      :key="i"
-      :color="year.color"
+      color="#3DAF7B"
       small
     >
       <template v-slot:opposite>
         <span
-          :class="`headline font-weight-bold ${year.color}--text`"
-          v-text="year.year"
+          :class="`headline font-weight-bold #3DAF7B--text`"
+          v-text="getTodayDate()"
         ></span>
       </template>
       <div class="py-4">
-        <h2 :class="`headline font-weight-light mb-4 ${year.color}--text`">
-          Lorem ipsum
-        </h2>
         <div>
-          Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.
-        </div>
+         {{todaysEntry}}  
+         </div>
+      </div>
+    </v-timeline-item>
+
+    <v-timeline-item
+      v-for="(entry, i) in entries.journalRecords"
+      :key="i"
+      color="#3DAF7B"
+      small
+    >
+      <template v-slot:opposite>
+        <span
+          :class="`headline font-weight-bold #3DAF7B--text`"
+          v-text="entry.date"
+        ></span>
+      </template>
+      <div class="py-4">
+        <div>
+        {{entry.text}}    
+         </div>
       </div>
     </v-timeline-item>
   </v-timeline>
@@ -79,33 +84,37 @@
 </template>
 
 <script>
+  import JournalRecordsService from "../../services/JournalRecordsService"; 
+
   export default {
     name: 'Journal',
 
     data: () => ({
-      years: [
-        {
-          color: '#C3EAD8',
-          year: '1/12/21',
-        },
-        {
-          color: '#A4DFC4',
-          year: '28/11/21',
-        },
-        {
-          color: '#77CFA8',
-          year: '12/11/21',
-        },
-        {
-          color: '#4ABF8A',
-          year: '23/10/21',
-        },
-        {
-          color: '#3DAF7B',
-          year: '5/10/21',
-        },
-      ],
+      date: null,
+      entries: null,
+
+      todaysEntry: "",
     }),
+
+    methods: {
+        getTodayDate() {            
+            let today = new Date();
+            
+            let year = today.getFullYear();
+            year = year.toString();
+            year = year.slice(2);
+
+            return today.getDate() + '/' + (today.getMonth() + 1) + '/' + year;
+        },
+
+        getEntries: function() {
+            this.entries = JournalRecordsService.getAll();
+        }
+    },
+
+    beforeMount() {
+        this.getEntries()
+    }
   }
 </script>
 

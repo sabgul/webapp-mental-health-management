@@ -67,7 +67,7 @@
     </v-card-text>
 
     <v-card-text class="text-h7 font-weight-bold">
-        <v-btn icon href="https://ipcko.sk/mapa-pomoci/linky-pomoci/" target="_blank">
+        <v-btn icon href="https://ipcko.sk/mapa-pomoci/linky-pomoci/" target="_blank" style="padding-left: 3.6em;">
         <v-icon>
             mdi-earth
         </v-icon>
@@ -93,7 +93,7 @@
     </v-card-text>
 
     <v-card-text class="text-h7 font-weight-bold">
-        <v-btn icon href="https://www.betterhelp.com/" target="_blank">
+        <v-btn icon href="https://www.betterhelp.com/" target="_blank" style="padding-left: 5.7em;">
         <v-icon>
             mdi-earth
         </v-icon>

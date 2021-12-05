@@ -1,0 +1,54 @@
+{
+    "feelingRecords": [
+        {
+            "feelingRate": 5,
+            "feelingReason": "Dostala som kompliment od spolucestujucej v saline. Vraj mam pekne vlasy.",
+            "date": "3/12/21"
+        },
+        {
+            "feelingRate": 1,
+            "feelingReason": "Stretla som ex.",
+            "date": "7/1/21"
+        },
+        {
+            "feelingRate": 1,
+            "feelingReason": "Nedala som skusku z IMA2",
+            "date": "6/1/21"
+        },
+        {
+            "feelingRate": 3,
+            "feelingReason": "Kupila som si cokoladku.",
+            "date": "5/1/21"
+        },
+        {
+            "feelingRate": 3,
+            "feelingReason": "Opica z alkoholu.",
+            "date": "1/1/21"
+        },
+        {
+            "feelingRate": 2,
+            "feelingReason": "Nudila som sa cely den.",
+            "date": "16/12/20"
+        },
+        {
+            "feelingRate": 1,
+            "feelingReason": "Pohadala som sa s mamou.",
+            "date": "15/7/20"
+        },
+        {
+            "feelingRate": 1,
+            "feelingReason": "Zmeskala som let na dovolenku.",
+            "date": "1/7/20"
+        },
+        {
+            "feelingRate": 4,
+            "feelingReason": "Dostala som povysenie v praci.",
+            "date": "1/6/20"
+        },
+        {
+            "feelingRate": 5,
+            "feelingReason": "Poriadne som sa vyspala.",
+            "date": "12/4/20"
+        }
+    ]
+}
