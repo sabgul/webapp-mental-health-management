@@ -1,0 +1,24 @@
+{
+  "emotions" : [
+    {
+      "emotion": "horrible",
+      "date": "date"
+    },
+    {
+      "emotion": "bad",
+      "date": "date"
+    },
+    {
+      "emotion": "normal",
+      "date": "date"
+    },
+    {
+      "emotion": "good",
+      "date": "date"
+    },
+    {
+      "emotion": "excelent",
+      "date": "date"
+    }
+  ]
+}

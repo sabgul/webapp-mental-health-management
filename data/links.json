@@ -1,0 +1,14 @@
+{
+  "links" : [
+    {
+      "link" : "link",
+      "summary" : "some longer text"
+    }
+  ],
+  "video-links" : [
+    {
+      "link" : "link",
+      "summary" : "some longer summary"
+    }
+  ]
+}

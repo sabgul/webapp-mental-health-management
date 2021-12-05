@@ -1,0 +1,20 @@
+{
+  "quotes" : [
+    {
+      "author":"Random Guy",
+      "text":"Some very random quote"
+    },
+    {
+      "author":"Abraham Lincoln",
+      "text":"Third trilogy of Star Wars was the worst"
+    },
+    {
+      "author":"Gandalf",
+      "text":"Run you fools!"
+    },
+    {
+      "author":"Veni, Vidi, Vici",
+      "text":"Gaius Julius Caesar"
+    }
+  ]
+}

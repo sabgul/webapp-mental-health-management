@@ -1,0 +1,11 @@
+{
+  "date": "some date",
+  "meditation": {
+    "morning": false,
+    "midday": false,
+    "evening": false
+  },
+  "reflect": true,
+  "journal": false,
+  "emotion": false
+}

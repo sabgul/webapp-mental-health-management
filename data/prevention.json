@@ -1,0 +1,28 @@
+{
+  "lines" : [
+    {
+      "country" : "CZ",
+      "phone-prefix" : 420,
+      "phone" : 111222333,
+      "webpage" : "http://page.cz"
+    },
+    {
+      "country" : "DE",
+      "phone-prefix" : 433,
+      "phone" : 111222333,
+      "webpage" : "http://page.de"
+    },
+    {
+      "country" : "AT",
+      "phone-prefix" : 444,
+      "phone" : 111222333,
+      "webpage" : "http://page.at"
+    },
+    {
+      "country" : "SK",
+      "phone-prefix" : 421,
+      "phone" : 111222333,
+      "webpage" : "http://page.sk"
+    }
+  ]
+}
