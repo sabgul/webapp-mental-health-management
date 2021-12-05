@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "540013377139",
+    "project_id": "wello-dbef3",
+    "storage_bucket": "wello-dbef3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:540013377139:android:2fe861a68796162abc1c06",
+        "android_client_info": {
+          "package_name": "com.flutterflow.wellomobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "540013377139-rbleihe2nni6glponpl3am8kec87ohhb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.flutterflow.wellomobile",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "540013377139-b6rqc4f9n8rk7a6oig08dmf3s91r1ber.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6gsyB4mcJit1dyKsap7oXNnwgqNmUTcM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "540013377139-b6rqc4f9n8rk7a6oig08dmf3s91r1ber.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "540013377139-uu9jv1u8r2puped22k1015in8actpq7e.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.flutterflow.wellomobile"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
