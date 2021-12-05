@@ -2,11 +2,11 @@
     "journalRecords": [
         {
             "date": "4/07/21",
-            "text": "Our life is what our thoughts make it."
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac felis pretium, pulvinar mauris eu, fermentum orci.." 
         },
         {
             "date": "21/12/20",
-            "text": "Our life is what our thoughts make it."
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac felis pretium, pulvinar mauris eu, fermentum orci."
         },
         {
             "date": "2/11/20",
@@ -14,11 +14,31 @@
         },
         {
             "date": "21/03/20",
-            "text": "Our life is what our thoughts make it."
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac felis pretium, pulvinar mauris eu, fermentum orci."
         },
         {
             "date": "17/2/20",
-            "text": "Som aky som."
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac felis pretium, pulvinar mauris eu, fermentum orci."
+        },
+        {
+            "date": "16/2/20",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac felis pretium, pulvinar mauris eu, fermentum orci."
+        },
+        {
+            "date": "15/2/20",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac felis pretium, pulvinar mauris eu, fermentum orci."
+        },
+        {
+            "date": "11/2/20",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac felis pretium, pulvinar mauris eu, fermentum orci."
+        },
+        {
+            "date": "10/1/20",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac felis pretium, pulvinar mauris eu, fermentum orci."
+        },
+        {
+            "date": "17/12/19",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac felis pretium, pulvinar mauris eu, fermentum orci."
         }
     ]
 }

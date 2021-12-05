@@ -23,6 +23,10 @@ export default {
     'SideBar': SideBar,
   },
 
+  created() {
+    document.title = "wello.";
+  },
+
   computed: {
     currentRouteName() {
         let name = this.$route.name;
