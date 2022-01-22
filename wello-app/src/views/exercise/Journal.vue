@@ -14,14 +14,26 @@ Date:           3/12/21
           </v-card-title>
 
           <v-row align="center" justify="center">
-            <v-textarea
-              class="text-4 font-weight-bold ma-5"
-              label="Today's entry"
-              id="feelingTextArea"
-              multi-line
-              v-model="todaysEntry"
-            ></v-textarea>
-          </v-row>
+            <v-form @submit.prevent="addEntry">
+              <v-textarea
+                class="text-4 font-weight-bold ma-5"
+                label="Today's entry"
+                id="feelingTextArea"
+                multi-line
+                v-model="todaysEntry"
+              ></v-textarea>
+            </v-form>
+          </v-row> 
+
+          <v-card-actions>
+              <v-list-item class="grow">
+                <v-row align="center" justify="end">
+                  <v-btn>
+                    <v-icon class="mr-1">mdi-send-outline</v-icon>SAVE
+                  </v-btn>
+                </v-row>
+              </v-list-item>
+            </v-card-actions>
         </v-card>
         <v-row>
           <v-img :src="require('@/assets/undraw_road_to_knowledge_m8s0.svg')" width="15"></v-img>
@@ -31,17 +43,17 @@ Date:           3/12/21
       <v-col>
         <v-card elevation="8" shaped outlined>
           <v-timeline>
-            <v-timeline-item color="#3DAF7B" small>
+            <!-- <v-timeline-item color="#3DAF7B" small>
               <template v-slot:opposite>
                 <span :class="`headline font-weight-bold #3DAF7B--text`" v-text="getTodayDate()"></span>
               </template>
               <div class="py-4">
                 <div>{{todaysEntry}}</div>
               </div>
-            </v-timeline-item>
+            </v-timeline-item> -->
 
             <v-timeline-item
-              v-for="(entry, i) in entries.journalRecords"
+              v-for="(entry, i) in entries"
               :key="i"
               color="#3DAF7B"
               small
@@ -61,7 +73,8 @@ Date:           3/12/21
 </template>
 
 <script>
-import JournalRecordsService from "../../services/JournalRecordsService";
+import { db } from '@/main';
+// import JournalRecordsService from "../../services/JournalRecordsService";
 
 export default {
   name: "Journal",
@@ -84,9 +97,46 @@ export default {
       return today.getDate() + "/" + (today.getMonth() + 1) + "/" + year;
     },
 
-    getEntries: function() {
-      this.entries = JournalRecordsService.getAll();
-    }
+    async getEntries() {
+            let snapShot = await db.collection('journalRecords').get();       // this returns promise
+            let journalEntries = [];
+            // every item from collection is pushed into events array
+            snapShot.forEach(doc => {
+                let appData = doc.data();
+                appData.id = doc.id;
+                journalEntries.push(appData);
+            });
+            this.entries = journalEntries;
+    },
+
+    // getEntries: function() {
+    //   this.entries = JournalRecordsService.getAll();
+    // } 
+
+    async addEntry() {
+            if(this.text) {
+                await db.collection('journalRecords').add({
+                    date: this.getTodayDate(),
+                    text: this.text
+                    // name: this.name,
+                    // details: this.details,
+                    // start: this.start,
+                    // end: this.end,
+                    // color: this.color
+                });
+                this.getEntries();
+                this.date = "";
+                this.text = "";
+                // this.getEvents();
+                // this.name = "";
+                // this.details = "";
+                // this.start = "";
+                // this.end = "";
+                // this.color = "#1976D2";
+            } else {
+                alert('Name, start and end dates are required!');
+            }
+        },
   },
 
   beforeMount() {
