@@ -83,7 +83,8 @@ Date:           3/12/21
 </template>
 
 <script>
-import FeelingRecordsService from "../../services/FeelingRecordsService";
+import { db } from '@/main';
+// import FeelingRecordsService from "../../services/FeelingRecordsService";
 
 export default {
   name: "Trends",
@@ -99,26 +100,63 @@ export default {
   }),
 
   methods: {
-    getRecords: function() {
-      this.records = FeelingRecordsService.getAll();
+    async getRecords() {
+            let snapShot = await db.collection('feelingRecords').get();       // this returns promise
+            let feelingRecords = [];
+            // every item from collection is pushed into events array
+            snapShot.forEach(doc => {
+                let appData = doc.data();
+                appData.id = doc.id;
+                feelingRecords.push(appData);
+            });
+            this.records = feelingRecords;
+
+            for (let index = 0; index < this.records.length; index++) {
+              this.value.push(this.records[index].feelingRate);
+              this.labels.push(this.records[index].date);
+            }
     },
 
-    getHighsRecords: function() {
-      this.highs = FeelingRecordsService.getPositiveRecords();
-    },
+    async getHighsRecords() {
+            let snapShot = await db.collection('feelingRecords').get();       // this returns promise
+            let positiveRecords = [];
+            // every item from collection is pushed into events array
+            snapShot.forEach(doc => {
+                let appData = doc.data();
+                appData.id = doc.id;
+                if(appData.feelingRate > 3) {
+                  positiveRecords.push(appData.feelingReason);
+                }
+            });
+            this.highs = positiveRecords;
+    }, 
 
-    getLowsRecords: function() {
-      this.lows = FeelingRecordsService.getNegativeRecords();
-    }
+    async getLowsRecords() {
+            let snapShot = await db.collection('feelingRecords').get();       // this returns promise
+            let negativeRecords = [];
+            // every item from collection is pushed into events array
+            snapShot.forEach(doc => {
+                let appData = doc.data();
+                appData.id = doc.id;
+                if(appData.feelingRate < 3) {
+                  negativeRecords.push(appData.feelingReason);
+                }
+            });
+            this.lows = negativeRecords;
+    },
+    
+
+    // getHighsRecords: function() {
+    //   this.highs = FeelingRecordsService.getPositiveRecords();
+    // },
+
+    // getLowsRecords: function() {
+    //   this.lows = FeelingRecordsService.getNegativeRecords();
+    // }
   },
 
   beforeMount() {
     this.getRecords();
-
-    for (let index = 0; index < this.records.feelingRecords.length; index++) {
-      this.value.push(this.records.feelingRecords[index].feelingRate);
-      this.labels.push(this.records.feelingRecords[index].date);
-    }
 
     this.getHighsRecords();
     this.getLowsRecords();
